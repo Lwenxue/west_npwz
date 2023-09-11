@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>南屏晚钟</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 	</head>
 	<style>
 		body {
@@ -44,6 +45,7 @@
 		  text-decoration: none;
 		  z-index: 9999;
 		}
+		
 		
 		.menu {
 		  width: 25%;
@@ -105,7 +107,8 @@
 			padding: 5px 10px;
 		}
 		.npwz h2{
-			text-align:center;}
+			text-align: center;
+		}
 		.jg{
 			width: 25%;
 			height: 20%;
@@ -148,6 +151,37 @@
 			float: right;
 			margin-right: 10px;
 		}
+		/* 定义箭头样式 */
+		.arrow {
+		  font-size: 20px;
+		  vertical-align: middle;
+		}
+		
+		/* 定义按钮样式 */
+		.button {
+		  display: inline-block;
+		  padding: 5px 8px;
+		  border: none;
+		  border-radius: 3px;
+		  background-color: #949594;
+		  color: white;
+		  cursor: pointer;
+		  font-size: 8px;
+		}
+		.pagination  {
+		  position: fixed;
+		  bottom: 20px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		}
+		
+		/* 定义按钮 hover 状态的样式 */
+		.button:hover {
+		  background-color: #979897;
+		}
+		.button i {
+		      font-size: 8px; /* 这里设置图标的大小 */
+		    }
 	</style>
 	<body>
 		<div class="container">
@@ -335,6 +369,22 @@
 				添了“佛国山”的别称。</p>
 			<p>南屏山麓另一座著名的佛刹，兴教寺始建于北宋开宝五年（972），它曾是佛教天台宗山家派的大本营。净慈寺、兴教寺加上附近的中小寺庙，形成
 			继灵隐、天竺之后湖上又一佛寺群落，晨钟暮鼓，焚贝佛号，香烟烛光，南屏山从此添了‘佛国山’的别称南屏晚钟的情韵，悠然成型。</p>
+			<div class="pagination">
+			    <a href="https://lwenxue.github.io/west_styy/styy.html" class="prev">
+					<!-- 上一页按钮 -->
+				  <button class="button" onclick="goToPreviousPage()">
+					<i class="arrow fas fa-chevron-left"></i>
+					上一页
+				  </button>
+				</a>
+			    <a href="https://lwenxue.github.io/west_lfxz/lfxz.html" class="next">
+					<!-- 下一页按钮 -->
+					<button class="button" onclick="goToNextPage()">
+										下一页
+					<i class="arrow fas fa-chevron-right"></i>
+					</button>
+				</a>
+			</div>
 		</div>
 	</body>
 	<script>
